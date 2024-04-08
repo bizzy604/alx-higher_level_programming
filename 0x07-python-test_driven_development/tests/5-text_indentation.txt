@@ -1,0 +1,55 @@
+"5-text_indentation" Module Test Documentaion
+=============================================
+Function Prototype: 'def text_indentation(text):'
+Usage: 
+	prints text with 2 new lines after each of these characters: ., ? and :
+
+Test cases
+==========
+Import 5-text_indentation
+-------------------------
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Valid values
+-------------
+	>>> text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud:"
+
+	>>> text_indentation(text)
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	<BLANKLINE>
+	Quonam modo?
+	<BLANKLINE>
+	Utrum igitur tibi litteram videor an totas paginas commovere?
+	<BLANKLINE>
+	Non autem hoc:
+	<BLANKLINE>
+	igitur ne illud quidem.
+	<BLANKLINE>
+	Fortasse id optimum, sed ubi illud:
+	<BLANKLINE>
+
+	>>> text_indentation("Amoni. Kevin")
+	Amoni.
+	<BLANKLINE>
+	Kevin
+
+	>>> text_indentation("Amoni. Kevin. is your name?")
+	Amoni.
+	<BLANKLINE>
+	Kevin.
+	<BLANKLINE>
+	is your name?
+	<BLANKLINE>
+
+Invalid Values
+--------------
+	>>> text_indentation(1)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> text_indentation(2.5)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+

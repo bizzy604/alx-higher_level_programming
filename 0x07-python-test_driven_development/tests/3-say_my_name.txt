@@ -1,0 +1,40 @@
+'3-say_my_name' Module Test Documentation
+=========================================
+Function: '3-say_my_name.say_my_name()'
+Prototype: 'def say_my_name(first_name, last_name="")'
+
+Takes first and last name and Prints out "My name is <first name> <last name>
+
+say_my_name() Tests
+===================
+Import 'say_my_name()'
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Tests
+=====
+	>>> first_name = "Amoni"
+	>>> last_name = "Kevin"
+	>>> number = 1
+
+	>>> say_my_name(first_name, last_name)
+	My name is Amoni Kevin
+
+	>>> say_my_name(1, last_name)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	>>> say_my_name(first_name, 1)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+	>>> say_my_name("Amoni3350", "Kevin")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	>>> say_my_name("Amoni", "Kev23ns")
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
