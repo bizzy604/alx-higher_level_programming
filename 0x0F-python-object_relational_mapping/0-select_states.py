@@ -27,4 +27,8 @@ if __name__ == "__main__":
         print(row)
 
     curs.close()
+<<<<<<< HEAD
     conn.close()
+=======
+    conn.close()
+>>>>>>> 86a64860688ec6c8232eb61bfcbdc401ae3aa5aa
